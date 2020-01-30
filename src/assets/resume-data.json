@@ -1,0 +1,59 @@
+{
+  "work": [
+    {
+      "title": "Bizlibrary",
+      "position": "Front-End Developer",
+      "dates": "November 2018 - Present",
+      "points": [
+        "Maintained and added new features to projects using the KnockoutJS framework",
+        "Made architecture decisions and set coding standards throughout the effort to rebuild the LMS using the VueJS framework",
+        "Participated in design discussions for a new API to support our rebuild",
+        "Worked with a UI designer and the Product team to theme Fomantic-UI for our needs",
+        "Worked with backend developers to complete work items as efficiently as possible",
+        "QA tested work items completed by other developers on the team",
+        "Made occasional changes to C# Controllers and Repositories as well as MySQL scripts"
+      ]
+    },
+    {
+      "title": "Bullhorn Inc.",
+      "position": "Software Engineer",
+      "dates": "June 2016 - August 2018",
+      "points": [
+        "Worked to complete projects within the Agile Methodology",
+        "Maintained an aging Flash application for Time & Expense and Onboarding",
+        "Rewrote the application mentioned above into an Angular2 framework using Typescript",
+        "Updated the PHP backend to work with both the Flash and Angular2 version",
+        "Wrote unit tests in PHP and JavaScript",
+        "Built reporting app in AngularJS using IBM Cognos",
+        "Worked with Selenium automation written in Java to triage possible bugs"
+      ]
+    },
+    {
+      "title": "Westminster College IT Department",
+      "position": "Student Technical Support",
+      "dates": "August 2014 - May 2016",
+      "points": [
+        "Worked with a team to keep the campus technology in working order",
+        "Responded to technology service requests in a timely manner",
+        "Answered Help Desk telephone and respond to service requests",
+        "Worked with campus coordinators to set up audio and visual equipment for major events on campus",
+        "Assisted with the upkeep of wireless network access points on campus",
+        "Diagnosed hardware and software issues on computers and other devices",
+        "Replaced and installed necessary hardware on computers"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Westminster College",
+      "position": "Fulton, MO",
+      "dates": "Bachelor of Arts: May 2016",
+      "points": [
+        { "header": "Major", "description": "Computer Science" },
+        { "header": "GPA", "description": "3.84/4.00" },
+        { "header": "Dean's List", "description": "Fall 2012, Spring 2013, Fall 2013, Spring 2014, Fall 2014, Spring 2015, Fall 2015" },
+        { "header": "Winston S. Churchill Scholarship" }
+      ]
+    }
+  ]
+}
