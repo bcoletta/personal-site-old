@@ -19,7 +19,7 @@
     </div>
     <div class="ui basic segment">
       <div class="ui container">
-        <div class="ui active loader" v-if="loading"></div>
+        <div class="ui active orange loader" v-if="loading"></div>
         <div class="ui grid" v-if="!loading">
           <div class="ui row">
             <div class="sixteen wide mobile ten wide computer column">
