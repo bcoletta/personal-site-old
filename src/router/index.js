@@ -11,7 +11,7 @@ const routes = [
   },
   {
     path: '/',
-    redirect: '/resume', 
+    redirect: '/resume',
   },
   {
     path: '/resume',
@@ -23,6 +23,11 @@ const routes = [
     name: 'movies',
     component: () =>
       import('../views/Movies.vue'),
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('../views/Admin.vue'),
   },
 ];
 

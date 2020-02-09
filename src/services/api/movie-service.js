@@ -6,4 +6,7 @@ export default {
   getMovies() {
     return API.get(baseURI).then(res => res);
   },
+  addMovie(body) {
+    return API.put(baseURI, body);
+  },
 }

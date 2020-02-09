@@ -6,4 +6,7 @@ export default {
   get(path) {
     return axios.get(`${baseURI}${path}`).then(res => res.data);
   },
+  put(path, body) {
+    return axios.put(`${baseURI}${path}`, body).then(res).catch(err);
+  },
 }
