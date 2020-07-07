@@ -1,6 +1,7 @@
 <template>
   <div class="ui basic segment">
-    <div class="ui middle aligned center aligned grid">
+    <Password v-if="!validated" @validated="() => { validated = true }" />
+    <div v-else class="ui middle aligned center aligned grid">
       <div class="admin column">
         <h2 class="ui header">Add a Movie Rating</h2>
         <form class="ui form">
@@ -42,9 +43,13 @@
 
 <script>
 import MovieService from '@/services/api/movie-service';
+import Password from '@/components/admin/Password';
 
 export default {
   name: 'Admin',
+  components: {
+    Password,
+  },
   data() {
     return {
       title: '',
@@ -52,6 +57,7 @@ export default {
       entertainment: 0,
       story: 0,
       error: null,
+      validated: false,
     };
   },
   computed: {
@@ -71,6 +77,7 @@ export default {
       if (this.valid && this.date) {
         this.error = null;
         let body = {
+          password: this.$store.getters.password,
           title: this.title,
           date: `${this.date.getMonth() +
             1}/${this.date.getDate()}/${this.date.getFullYear()}`,

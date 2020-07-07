@@ -7,6 +7,13 @@ export default {
     return axios.get(`${baseURI}${path}`).then(res => res.data);
   },
   put(path, body) {
-    return axios.put(`${baseURI}${path}`, body).then(res).catch(err);
+    return axios.put(`${baseURI}${path}`, body).then(res => {
+      if (res && res.statusCode && res.statusCode === 403) {
+        throw new Error('Unauthorized');
+      }
+    }).catch(err);
+  },
+  post(path, body) {
+    return axios.post(`${baseURI}${path}`, body).then(res => res.data);
   },
 }
