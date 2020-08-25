@@ -81,6 +81,7 @@ export default {
     },
     getPoints() {
       let promises = [];
+      this.points = [];
 
       this.data.forEach(rating => {
         let promise = new Promise(resolve => {
