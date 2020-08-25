@@ -1,15 +1,14 @@
 <template>
   <div class="ui basic container segment">
-    <form class="ui form">
+    <form class="ui form" @submit.prevent="submit">
       <div class="ui field">
         <label>Password</label>
         <input type="password" v-model="password" />
       </div>
       <button
-        type="button"
+        type="submit"
         class="ui fluid primary button"
         :class="{ disabled: !valid }"
-        @click="submit"
       >Submit</button>
     </form>
     <div class="ui error message" v-if="error">Invalid password</div>
