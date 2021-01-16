@@ -15,8 +15,8 @@ const mutations = {
 };
 
 const actions = {
-  getMovies({ getters, commit, }) {
-    let movies = [ ...getters.movies, ];
+  getMovies({ getters, commit }) {
+    let movies = [ ...getters.movies ];
     if (movies.length > 0) {
       return movies;
     }

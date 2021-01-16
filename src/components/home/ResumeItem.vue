@@ -25,6 +25,6 @@
 <script>
 export default {
   name: 'ResumeItem',
-  props: [ 'item', ],
+  props: [ 'item' ],
 };
 </script>

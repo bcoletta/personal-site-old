@@ -21,7 +21,7 @@ import ResumeItem from './ResumeItem.vue';
 
 export default {
   name: 'ResumeList',
-  props: [ 'list', 'listTitle', ],
+  props: [ 'list', 'listTitle' ],
   components: {
     ResumeItem,
   },

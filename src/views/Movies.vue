@@ -20,13 +20,14 @@
     <div class="ui basic segment">
       <div class="ui container">
         <div class="ui active orange loader" v-if="loading"></div>
+        <MovieDetails v-if="selectedMovie" :movie="selectedMovie"></MovieDetails>
         <div class="ui grid" v-if="!loading">
           <div class="ui row">
             <div class="sixteen wide mobile ten wide computer column">
               <MovieChart ref="movieChart" :data="displayMovies"></MovieChart>
             </div>
             <div class="sixteen wide mobile six wide computer column">
-              <MovieList :data="displayMovies" @filtered="filterData"></MovieList>
+              <MovieList :data="displayMovies" @filtered="filterData" @select="movie => { selectedMovie = movie }"></MovieList>
             </div>
           </div>
         </div>
@@ -37,12 +38,14 @@
 
 <script>
 import MovieChart from '@/components/movies/MovieChart.vue';
+import MovieDetails from '@/components/movies/MovieDetails.vue';
 import MovieList from '@/components/movies/MovieList.vue';
 
 export default {
   name: 'movies',
   components: {
     MovieChart,
+    MovieDetails,
     MovieList,
   },
   data() {
@@ -50,15 +53,15 @@ export default {
       movies: [],
       displayMovies: [],
       loading: true,
+      selectedMovie: null,
     };
   },
   methods: {
     filterData(val) {
-      let event = [];
       if (val !== '') {
         this.displayMovies = this.movies.filter(d => d.title.toLowerCase().includes(val.toLowerCase()));
       } else {
-        this.displayMovies = [ ...this.movies, ];
+        this.displayMovies = [ ...this.movies ];
       }
     },
     getData() {

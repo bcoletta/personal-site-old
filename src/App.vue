@@ -2,7 +2,7 @@
   <div class="app">
     <div class="ui inverted attached menu">
       <router-link to="/">
-        <img src="@/assets/favicon.png" class="item" /> 
+        <img src="@/assets/favicon.png" class="item" />
       </router-link>
       <router-link
         to="/resume"

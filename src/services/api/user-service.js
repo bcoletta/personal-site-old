@@ -4,6 +4,6 @@ const baseUrl = 'users'
 
 export default {
   validateUser(password) {
-    return API.post(`${baseUrl}/validate`, { password, });
+    return API.post(`${baseUrl}/validate`, { password });
   },
 }

@@ -20,7 +20,7 @@
       <div
         class="movie-list item"
         data-test="test"
-        @click="() => {filter = movie.title}"
+        @click="clickMovie(movie)"
         v-for="(movie, i) in sortedData"
         :key="i"
         :id="movie.title"
@@ -48,7 +48,7 @@
 <script>
 export default {
   name: 'MovieList',
-  props: [ 'data', ],
+  props: [ 'data' ],
   data() {
     return {
       filter: '',
@@ -58,7 +58,7 @@ export default {
   computed: {
     sortedData() {
       if (this.data) {
-        return [ ...this.data, ].sort((a, b) => {
+        return [ ...this.data ].sort((a, b) => {
           if (this.sort === 'date') {
             return new Date(a.date) < new Date(b.date) ? 1 : -1;
           } else if (this.sort === 'title') {
@@ -75,12 +75,15 @@ export default {
     emitData(val) {
       this.$emit('filtered', val);
     },
+    clickMovie(movie) {
+      this.$emit('select', movie);
+    },
   },
   mounted() {
     var _this = this;
     $('.ui.dropdown').dropdown({
       onChange(val) {
-        _this.$router.push({ query: { orderBy: val, }, });
+        _this.$router.push({ query: { orderBy: val } });
       },
     });
   },

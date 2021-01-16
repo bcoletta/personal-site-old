@@ -1,9 +1,9 @@
 <script>
-import { Bubble, } from 'vue-chartjs';
+import { Bubble } from 'vue-chartjs';
 export default {
   extends: Bubble,
   name: 'MovieChart',
-  props: [ 'data', ],
+  props: [ 'data' ],
   data() {
     return {
       points: [],
@@ -16,7 +16,7 @@ export default {
         const _this = this;
         this.chart = this.renderChart(
           {
-            labels: [ 'Data', ],
+            labels: [ 'Data' ],
             datasets: [
               {
                 label: 'Data One',
@@ -86,7 +86,7 @@ export default {
       this.data.forEach(rating => {
         let promise = new Promise(resolve => {
           let z = {};
-          z.titles = [ rating.title, ];
+          z.titles = [ rating.title ];
           z.r = 5;
           z.x = rating.s;
           z.y = rating.e;
