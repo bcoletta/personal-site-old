@@ -91,6 +91,8 @@ export default {
           1}/${this.date.getDate()}/${this.date.getFullYear()}`,
           e: this.entertainment,
           s: this.story,
+          tmdbId: this.tmdbId,
+          review: this.review,
         };
         MovieService.addMovie(body);
       } else {
