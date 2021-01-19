@@ -4,11 +4,15 @@
       <div class="ui container">
         <h2 class="ui inverted header">Movie Rankings</h2>
         <h5 class="header">
-          All of 2019 I have been keeping track of movies that I've been
-          watching and recently I started rating them based on their
-          entertainment value and their story. I will update this as I watch
-          movies which so check back every now and then to find new reasons to
-          argue with me about movies.
+          Since 2019, I have been keeping track of movies that I've been
+          watching and rating them based on their entertainment value and their
+          story. I will update this as I watch movies which so check back every
+          now and then to find new reasons to argue with me about movies.
+        </h5>
+        <h5>
+          2021 Update! You can now click any movie in the list to see details
+          about that movie AND a two sentence review for movies I watched after
+          January 1, 2021
         </h5>
         <div class="italic">
           Disclaimer: I am not in any way qualified to be ranking movies and I
@@ -20,14 +24,25 @@
     <div class="ui basic segment">
       <div class="ui container">
         <div class="ui active orange loader" v-if="loading"></div>
-        <MovieDetails v-if="selectedMovie" :movie="selectedMovie"></MovieDetails>
+        <MovieDetails
+          v-if="selectedMovie"
+          :movie="selectedMovie"
+        ></MovieDetails>
         <div class="ui grid" v-if="!loading">
           <div class="ui row">
             <div class="sixteen wide mobile ten wide computer column">
               <MovieChart ref="movieChart" :data="displayMovies"></MovieChart>
             </div>
             <div class="sixteen wide mobile six wide computer column">
-              <MovieList :data="displayMovies" @filtered="filterData" @select="movie => { selectedMovie = movie }"></MovieList>
+              <MovieList
+                :data="displayMovies"
+                @filtered="filterData"
+                @select="
+                  (movie) => {
+                    selectedMovie = movie;
+                  }
+                "
+              ></MovieList>
             </div>
           </div>
         </div>
@@ -59,14 +74,16 @@ export default {
   methods: {
     filterData(val) {
       if (val !== '') {
-        this.displayMovies = this.movies.filter(d => d.title.toLowerCase().includes(val.toLowerCase()));
+        this.displayMovies = this.movies.filter((d) =>
+          d.title.toLowerCase().includes(val.toLowerCase())
+        );
       } else {
         this.displayMovies = [ ...this.movies ];
       }
     },
     getData() {
       this.loading = true;
-      this.$store.dispatch('getMovies').then(data => {
+      this.$store.dispatch('getMovies').then((data) => {
         this.movies = data;
         this.displayMovies = data;
         this.loading = false;
