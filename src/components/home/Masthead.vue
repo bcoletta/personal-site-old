@@ -5,10 +5,9 @@
           <div class="eight wide column">
             <h2 class="ui inverted header">Welcome!</h2>
             <p>
-              My name is Brendan Coletta and I am a Front-end developer in St.
-              Louis, Missouri. I enjoy working with HTML, CSS, JavaScript, and
-              TypeScript and have professional experience working with Angular2
-              and VueJS.
+              My name is Brendan Coletta and I am a Front-end developer in Denver, CO.
+              I enjoy working with HTML, CSS, JavaScript, and TypeScript
+              and have professional experience working with Angular2 and VueJS.
             </p>
           </div>
           <div class="six wide right floated column">
@@ -34,6 +33,7 @@
             </div>
             <img
               id="profile-image"
+              alt="An image of Brendan Coletta wearing a suit"
               src="@/assets/LinkedInProfilePicture1.jpg"
               class="ui left floated image"
             />
