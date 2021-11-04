@@ -57,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="row" v-if="data.review">
+        <div class="row" v-if="data.review.trim()">
           <div class="column">
             <h5 class="ui header">Two Sentence Review:</h5>
             {{ data.review }}

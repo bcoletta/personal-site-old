@@ -11,8 +11,7 @@
         </h5>
         <h5>
           2021 Update! You can now click any movie in the list to see details
-          about that movie AND a two sentence review for movies I watched after
-          January 1, 2021
+          about that movie
         </h5>
         <div class="italic">
           Disclaimer: I am not in any way qualified to be ranking movies and I

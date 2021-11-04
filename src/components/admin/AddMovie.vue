@@ -70,8 +70,7 @@ export default {
         this.entertainment > 0 &&
         this.entertainment <= 10 &&
         this.story > 0 &&
-        this.story <= 10 &&
-        this.review.length > 0
+        this.story <= 10
       );
     },
   },
