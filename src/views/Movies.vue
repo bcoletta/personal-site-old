@@ -10,8 +10,7 @@
           now and then to find new reasons to argue with me about movies.
         </h5>
         <h5>
-          2021 Update! You can now click any movie in the list to see details
-          about that movie
+          You can click any movie in the list to see more details about that movie
         </h5>
         <div class="italic">
           Disclaimer: I am not in any way qualified to be ranking movies and I

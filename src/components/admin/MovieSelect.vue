@@ -1,8 +1,8 @@
 <template>
   <div id="movie-select" class="ui fluid search selection dropdown">
-    <input type="hidden" name="title">
+    <input type="hidden" name="title" />
     <i class="dropdown icon"></i>
-    <input type="text" class="search">
+    <input type="text" class="search" />
     <div class="default text">Enter a title...</div>
     <div class="menu"></div>
   </div>
@@ -12,7 +12,7 @@
 import TMDBService from '@/services/tmdb/tmdb-api-service';
 
 export default {
-name: 'MovieSelect',
+  name: 'MovieSelect',
   methods: {
     initDropdown() {
       const _this = this;
@@ -26,7 +26,7 @@ name: 'MovieSelect',
           onResponse(res) {
             return {
               success: true,
-              results: res.results.map(m => {
+              results: res.results.map((m) => {
                 return {
                   name: m.title,
                   value: m.id,
@@ -49,5 +49,5 @@ name: 'MovieSelect',
   updated() {
     this.initDropdown();
   },
-}
+};
 </script>

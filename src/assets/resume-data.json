@@ -1,9 +1,22 @@
 {
   "work": [
     {
+      "title": "Curate",
+      "position": "Senior Front-End Developer",
+      "dates": "May 2021 - Present",
+      "points": [
+        "Designed the Front-End architecture for a rebuild of the Curate app using VueJS and Vuetify",
+        "Designed a system to allow the app to be customized without code",
+        "Worked with a designer to theme Vuetify according to their designs",
+        "Helped other developers with problems related to VueJS and JavaScript",
+        "Wrote documentation for Front-End systems and processes to help onboard new developers and simplify development",
+        "Reviewed Front-End pull requests from other developers to ensure the code stayed clean and concise"
+      ]
+    },
+    {
       "title": "Bizlibrary",
       "position": "Front-End Developer",
-      "dates": "November 2018 - Present",
+      "dates": "November 2018 - May 2021",
       "points": [
         "Maintained and added new features to projects using the KnockoutJS framework",
         "Made architecture decisions and set coding standards throughout the effort to rebuild the LMS using the VueJS framework",
